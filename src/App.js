@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className = 'app'>
-      <button className='getUsersBtn' onClick={() => fetchCustomers()}>Получить пользователей</button>
+      <button className='getUsersBtn' onClick={() => dispatch(fetchCustomers())}>Получить пользователей</button>
       {users.map((el,i) =>{
         return(<h1 key={i}>{el.name}</h1>)
       })}
